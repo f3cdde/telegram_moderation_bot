@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - MODERATION_KEYWORDS=${MODERATION_KEYWORDS}
+      - ADMIN_USER_ID=${ADMIN_USER_ID}
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app
